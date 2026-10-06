@@ -12,7 +12,4 @@ def matrix_dot_vector(a, b) -> torch.Tensor:
     if a_t.size(1) != b_t.size(0):
         return torch.tensor(-1)
     else:
-        dot_vector_tensor = torch.zeros(b_t.shape)
-        dot_vector_tensor = a_t @ b_t
-
-    return dot_vector_tensor
+        return torch.mv(a_t, b_t)
