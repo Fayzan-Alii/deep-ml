@@ -20,4 +20,4 @@ def transform_matrix(A, T, S) -> torch.Tensor:
 
     result = torch.matmul(torch.matmul(T_inverse, A_t), S_t)
 
-    return torch.round(result, decimals=3)
+    return result.round(decimals=3)
