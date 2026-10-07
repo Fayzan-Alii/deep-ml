@@ -10,7 +10,7 @@ def inverse_2x2(matrix) -> torch.Tensor | None:
     Returns:
         A 2x2 tensor containing the inverse, or None if the matrix is singular
     """
-    m = torch.as_tensor(matrix, dtype=torch.float)
+    m = torch.as_tensor(matrix, dtype=torch.float64)
     
     if torch.linalg.det(m) == 0:
         return None
