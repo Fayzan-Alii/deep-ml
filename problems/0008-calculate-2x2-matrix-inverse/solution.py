@@ -1,17 +1,18 @@
-import numpy as np
+import torch
 
-def inverse_2x2(matrix: list[list[float]]) -> list[list[float]] | None:
+def inverse_2x2(matrix) -> torch.Tensor | None:
     """
-    Calculate the inverse of a 2x2 matrix.
+    Compute the inverse of a 2x2 matrix using PyTorch.
     
     Args:
-        matrix: A 2x2 matrix represented as [[a, b], [c, d]]
+        matrix: A 2x2 matrix (can be list, numpy array, or torch.Tensor)
     
     Returns:
-        The inverse matrix as a 2x2 list, or None if the matrix is singular
-        (i.e., determinant equals zero)
+        A 2x2 tensor containing the inverse, or None if the matrix is singular
     """
-    if np.linalg.det(matrix) == 0:
+    m = torch.as_tensor(matrix, dtype=torch.float)
+    
+    if torch.linalg.det(m) == 0:
         return None
 
-    return np.linalg.inv(np.array(matrix))
+    return torch.linalg.inv(m)
