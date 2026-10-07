@@ -18,4 +18,6 @@ def transform_matrix(A, T, S) -> torch.Tensor:
 
     T_inverse = torch.tensor([[T_t[1][1], -T_t[0][1]], [-T_t[1][0], T_t[0][0]]]) / det_T
 
-    return torch.matmul(torch.matmul(T_inverse, A_t), S_t)
+    result = torch.matmul(torch.matmul(T_inverse, A_t), S_t)
+
+    return torch.round(result, decimals=3)
