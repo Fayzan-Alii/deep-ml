@@ -15,4 +15,4 @@ def inverse_2x2(matrix) -> torch.Tensor | None:
     if torch.linalg.det(m) == 0:
         return None
 
-    return torch.linalg.inv(m)
+    return torch.linalg.inv(m).round(decimals=3)
