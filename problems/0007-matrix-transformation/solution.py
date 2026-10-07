@@ -14,7 +14,7 @@ def transform_matrix(A, T, S) -> torch.Tensor:
     det_S = S[0][0] * S[1][1] - S[0][1] * S[1][0]
 
     if det_S == 0 or det_T == 0:
-        return -1
+        return torch.tensor(-1)
 
     T_inverse = torch.tensor([[T_t[1][1], -T_t[0][1]], [-T_t[1][0], T_t[0][0]]]) / det_T
 
