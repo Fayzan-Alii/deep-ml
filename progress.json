@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T03:45:14.699Z",
+  "generated_at": "2026-10-12T03:45:33.254Z",
   "items": {
     "problem:1": {
       "kind": "problem",
@@ -127,9 +127,9 @@
       "url": "https://www.deep-ml.com/problems/10",
       "path": "problems/0010-calculate-covariance-matrix",
       "first_solved_at": "2026-10-12T03:37:52.824Z",
-      "last_pushed_at": "2026-10-12T03:45:13.367Z",
+      "last_pushed_at": "2026-10-12T03:45:31.926Z",
       "language": "python",
-      "lines": 12
+      "lines": 11
     }
   }
 }

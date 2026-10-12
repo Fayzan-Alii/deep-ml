@@ -1,5 +1,4 @@
 import torch
-import numpy as np
 
 def calculate_covariance_matrix(vectors) -> torch.Tensor:
     """
