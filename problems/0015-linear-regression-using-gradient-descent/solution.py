@@ -1,4 +1,3 @@
-# Cell 1
 import numpy as np
 
 def linear_regression_gradient_descent(X: np.ndarray, y: np.ndarray, alpha: float, iterations: int) -> np.ndarray:
@@ -27,5 +26,6 @@ def linear_regression_gradient_descent(X: np.ndarray, y: np.ndarray, alpha: floa
         gradients = (X.T @ error) / m
 
         theta = theta - (alpha * gradients)
+    
 
     return theta.flatten()
