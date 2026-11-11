@@ -1,4 +1,3 @@
-# Cell 1
 import numpy as np
 def feature_scaling(data: np.ndarray) -> (np.ndarray, np.ndarray):
     means = np.array([])
